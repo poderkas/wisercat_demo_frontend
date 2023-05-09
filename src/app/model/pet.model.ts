@@ -1,4 +1,4 @@
-export interface Pet{
+export class Pet {
     id: number;
     name: String;
     color: String;
