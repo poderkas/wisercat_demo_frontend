@@ -1,30 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreatePetComponent } from './pet/create-pet/create-pet.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { PetService } from './service/pet.service';
-import { HttpClientModule } from '@angular/common/http';
-import { PetListComponent } from './pet/pet-list/pet-list.component';
-import { UpdatePetComponent} from './pet/update-pet/update-pet.component';
-import { DataTablesModule } from 'angular-datatables';
+import { PetService } from './pet.service';
+import { HttpClientModule } from '@angular/common/http';import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CreatePetComponent,
-    PetListComponent,
-    UpdatePetComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    DataTablesModule
+    HttpClientModule, FormsModule
   ],
   providers: [PetService],
   bootstrap: [AppComponent]
